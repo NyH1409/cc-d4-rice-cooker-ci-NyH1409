@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RiceCooker = void 0;
 var promptSync = require("prompt-sync");
 var prompt = promptSync();
 var RiceCooker = /** @class */ (function () {
@@ -36,37 +37,41 @@ var RiceCooker = /** @class */ (function () {
     };
     return RiceCooker;
 }());
+exports.RiceCooker = RiceCooker;
 var riceCooker = new RiceCooker();
-while (true) {
-    console.log('Rice Cooker Emulator:');
-    console.log('1. Turn On/Off');
-    console.log('2. Plug In/Off');
-    console.log('3. Add Water/Empty');
-    console.log('4. Cook Rice');
-    console.log('5. Display Status');
-    console.log('0. Exit');
-    var choice = prompt('Enter your choice: ').trim();
-    switch (choice) {
-        case '1':
-            riceCooker.turnOnOrOff();
-            break;
-        case '2':
-            riceCooker.plugInOrOff();
-            break;
-        case '3':
-            riceCooker.addWaterOrEmpty();
-            break;
-        case '4':
-            riceCooker.cookRice();
-            break;
-        case '5':
-            riceCooker.displayStatus();
-            break;
-        case '0':
-            console.log('Exiting Rice Cooker Emulator.');
-            process.exit(0);
-            break;
-        default:
-            console.log('Invalid choice. Please enter a valid option.');
+function menu() {
+    var condition = true;
+    while (condition) {
+        console.log('Rice Cooker Emulator:');
+        console.log('1. Turn On/Off');
+        console.log('2. Plug In/Off');
+        console.log('3. Add Water/Empty');
+        console.log('4. Cook Rice');
+        console.log('5. Display Status');
+        console.log('0. Exit');
+        var choice = prompt('Enter your choice: ').trim();
+        switch (choice) {
+            case '1':
+                riceCooker.turnOnOrOff();
+                break;
+            case '2':
+                riceCooker.plugInOrOff();
+                break;
+            case '3':
+                riceCooker.addWaterOrEmpty();
+                break;
+            case '4':
+                riceCooker.cookRice();
+                break;
+            case '5':
+                riceCooker.displayStatus();
+                break;
+            case '0':
+                console.log('Exiting Rice Cooker Emulator.');
+                process.exit(0);
+                break;
+            default:
+                console.log('Invalid choice. Please enter a valid option.');
+        }
     }
 }
