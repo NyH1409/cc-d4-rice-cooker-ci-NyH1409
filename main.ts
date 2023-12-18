@@ -81,3 +81,5 @@ function menu() {
   }
 }
 
+//menu() uncomment when you want to run the app
+
