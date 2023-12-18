@@ -28,10 +28,7 @@ Use a modern IDE (IntelliJ, Eclipse, VSCode...) if possible.
 - **TypeScript**
 - We recommend using **Node.js >= 16.20.2**
 - Install the required package: 
-  + `npm install prompt-sync` 
-  + `npm install -g typescript` 
-  + `npm i --save-dev @types/node` 
-  + `npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript` 
+  + `npm install` 
 - Execute `tsc main.ts` to compile the code, this will generate a `.js` file 
 - Rename `.js` file to `.cjs`
 - Run the application: `node main.cjs`
